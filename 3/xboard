@@ -1,0 +1,3 @@
+#!/bin/sh
+DIR=$(dirname -- "$0");
+NO_UNIQUE_HOMES_CONSTRAINT=true node --unhandled-rejections=strict ${DIR}/../Maze/build/integration_tests/xboard.js 

@@ -1,0 +1,115 @@
+(testing /course/cs4500f22/ta/github/whimsical-mongooses/8/xbad2)
+(testing /course/cs4500f22/ta/github/8/59/Tests/0-in.json /course/cs4500f22/ta/github/8/59/Tests/0-out.json)
+/course/cs4500f22/ta/github/whimsical-mongooses/Maze/build/Common/State.js:168
+            throw new LabyrinthError_1.LabyrinthError({
+                  ^
+
+LabyrinthError: No player was found with color 'red'.
+    at BasicGameState.findAvatarIndex (/course/cs4500f22/ta/github/whimsical-mongooses/Maze/build/Common/State.js:168:19)
+    at BasicGameState.shiftPlayerToFirst (/course/cs4500f22/ta/github/whimsical-mongooses/Maze/build/Common/State.js:151:26)
+    at BasicGameState.setNextActivePlayer (/course/cs4500f22/ta/github/whimsical-mongooses/Maze/build/Common/State.js:57:18)
+    at BasicReferee.setupPlayers (/course/cs4500f22/ta/github/whimsical-mongooses/Maze/build/Referee/Referee.js:275:30)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async BasicReferee.runGame (/course/cs4500f22/ta/github/whimsical-mongooses/Maze/build/Referee/Referee.js:36:24)
+    at async badPlayerTest (/course/cs4500f22/ta/github/whimsical-mongooses/Maze/build/integration_tests/xbad.js:26:20) {
+  code: 'GAME_STATE_UNKNOWN_PLAYER'
+}
+---------------------------------
+(*** score 0)
+(*** on)
+'((("bill" "Euclid" "setUp")
+   ("max" "Euclid" "win")
+   ("matthias" "Riemann" "takeTurn"))
+  #hasheq((board
+           .
+           #hasheq((connectors
+                    .
+                    (("┼" "┼" "┼" "┼" "┼" "┼" "┼")
+                     ("┼" "┼" "┼" "┼" "┼" "┼" "┼")
+                     ("┼" "┼" "┼" "┼" "┼" "┼" "┼")
+                     ("┼" "┼" "┼" "┼" "┼" "┼" "┼")
+                     ("┼" "┼" "┼" "┼" "┼" "┼" "┼")
+                     ("┼" "┼" "┼" "┼" "┼" "┼" "┼")
+                     ("┼" "┼" "┼" "┼" "┼" "┼" "┼")))
+                   (treasures
+                    .
+                    ((("diamond" "red-spinel-square-emerald-cut")
+                      ("diamond" "red-diamond")
+                      ("zircon" "diamond")
+                      ("garnet" "pink-spinel-cushion")
+                      ("garnet" "pink-emerald-cut")
+                      ("garnet" "peridot")
+                      ("garnet" "padparadscha-sapphire"))
+                     (("zircon" "raw-beryl")
+                      ("zircon" "purple-square-cushion")
+                      ("zircon" "purple-spinel-trillion")
+                      ("garnet" "pink-round")
+                      ("garnet" "padparadscha-oval")
+                      ("garnet" "orange-radiant")
+                      ("garnet" "moss-agate"))
+                     (("garnet" "purple-cabochon")
+                      ("garnet" "prehnite")
+                      ("garnet" "prasiolite")
+                      ("garnet" "pink-opal")
+                      ("garnet" "morganite-oval")
+                      ("garnet" "moonstone")
+                      ("garnet" "mexican-opal"))
+                     (("garnet" "magnesite")
+                      ("garnet" "lemon-quartz-briolette")
+                      ("garnet" "lapis-lazuli")
+                      ("garnet" "labradorite")
+                      ("garnet" "kunzite")
+                      ("garnet" "kunzite-oval")
+                      ("garnet" "jaspilite"))
+                     (("garnet" "jasper")
+                      ("garnet" "iolite-emerald-cut")
+                      ("garnet" "hematite")
+                      ("garnet" "heliotrope")
+                      ("garnet" "hackmanite")
+                      ("garnet" "grossular-garnet")
+                      ("garnet" "green-princess-cut"))
+                     (("garnet" "green-beryl")
+                      ("garnet" "green-beryl-antique")
+                      ("garnet" "green-aventurine")
+                      ("garnet" "gray-agate")
+                      ("garnet" "grandidierite")
+                      ("garnet" "goldstone")
+                      ("garnet" "golden-diamond-cut"))
+                     (("garnet" "yellow-heart")
+                      ("garnet" "fancy-spinel-marquise")
+                      ("garnet" "emerald")
+                      ("garnet" "dumortierite")
+                      ("garnet" "diamond")
+                      ("garnet" "cordierite")
+                      ("garnet" "color-change-oval"))))))
+          (last . null)
+          (plmt
+           .
+           (#hasheq((color . "red")
+                    (current . #hasheq((column# . 1) (row# . 1)))
+                    (goto . #hasheq((column# . 5) (row# . 5)))
+                    (home . #hasheq((column# . 1) (row# . 1))))
+            #hasheq((color . "green")
+                    (current . #hasheq((column# . 2) (row# . 2)))
+                    (goto . #hasheq((column# . 1) (row# . 5)))
+                    (home . #hasheq((column# . 3) (row# . 5))))
+            #hasheq((color . "blue")
+                    (current . #hasheq((column# . 3) (row# . 3)))
+                    (goto . #hasheq((column# . 5) (row# . 3)))
+                    (home . #hasheq((column# . 3) (row# . 3))))))
+          (spare
+           .
+           #hasheq((1-image . "apatite")
+                   (2-image . "yellow-beryl-oval")
+                   (tilekey . "┼")))))
+(*** expected)
+'((() ("bill" "matthias" "max")))
+(*** but received)
+'(((plain fast with-newline plain-unicode) ()))
+
+
+(testing /course/cs4500f22/ta/github/8/59/Tests/1-in.json /course/cs4500f22/ta/github/8/59/Tests/1-out.json)
+(testing /course/cs4500f22/ta/github/8/59/Tests/3-in.json /course/cs4500f22/ta/github/8/59/Tests/3-out.json)
+((/course/cs4500f22/ta/github/8/59/Tests/1-in.json /course/cs4500f22/ta/github/8/59/Tests/1-out.json) (/course/cs4500f22/ta/github/8/59/Tests/3-in.json /course/cs4500f22/ta/github/8/59/Tests/3-out.json))
+((passed 2) (total 3) (partial-score 2))
+

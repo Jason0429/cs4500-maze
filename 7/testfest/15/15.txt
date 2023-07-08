@@ -1,0 +1,108 @@
+(testing /course/cs4500f22/ta/github/whimsical-mongooses/7/xbad)
+(testing /course/cs4500f22/ta/github/7/15/Tests/0-in.json /course/cs4500f22/ta/github/7/15/Tests/0-out.json)
+(testing /course/cs4500f22/ta/github/7/15/Tests/1-in.json /course/cs4500f22/ta/github/7/15/Tests/1-out.json)
+/course/cs4500f22/ta/github/whimsical-mongooses/Maze/build/Common/State.js:170
+            throw new LabyrinthError_1.LabyrinthError({
+                  ^
+
+LabyrinthError: No player was found with color 'yellow'.
+    at BasicGameState.findAvatarIndex (/course/cs4500f22/ta/github/whimsical-mongooses/Maze/build/Common/State.js:170:19)
+    at BasicGameState.shiftPlayerToFirst (/course/cs4500f22/ta/github/whimsical-mongooses/Maze/build/Common/State.js:153:26)
+    at BasicGameState.setNextActivePlayer (/course/cs4500f22/ta/github/whimsical-mongooses/Maze/build/Common/State.js:59:18)
+    at BasicReferee.setupPlayers (/course/cs4500f22/ta/github/whimsical-mongooses/Maze/build/Referee/Referee.js:280:30)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async BasicReferee.runGame (/course/cs4500f22/ta/github/whimsical-mongooses/Maze/build/Referee/Referee.js:38:24)
+    at async badPlayerTest (/course/cs4500f22/ta/github/whimsical-mongooses/Maze/build/integration_tests/xbad.js:29:20) {
+  code: 'GAME_STATE_UNKNOWN_PLAYER'
+}
+---------------------------------
+(*** score 0)
+(*** on)
+'((("eve" "Euclid" "setUp") ("roger" "Riemann"))
+  #hasheq((board
+           .
+           #hasheq((connectors
+                    .
+                    (("┌" "┌" "┌" "┌" "┌" "┌" "┌")
+                     ("┌" "┌" "┌" "┌" "┌" "┌" "┌")
+                     ("┌" "┌" "┌" "┌" "┌" "┌" "┌")
+                     ("┌" "┌" "┌" "┌" "┌" "┌" "┌")
+                     ("┌" "┌" "┌" "┌" "┌" "┌" "┌")
+                     ("┌" "┌" "┌" "┌" "┌" "┌" "┌")
+                     ("┌" "┌" "┌" "┌" "┌" "┌" "┌")))
+                   (treasures
+                    .
+                    ((("apatite" "alexandrite")
+                      ("apatite" "amethyst")
+                      ("apatite" "ametrine")
+                      ("apatite" "ammolite")
+                      ("apatite" "ruby")
+                      ("apatite" "diamond")
+                      ("apatite" "jasper"))
+                     (("apatite" "aplite")
+                      ("apatite" "blue-ceylon-sapphire")
+                      ("apatite" "emerald")
+                      ("apatite" "yellow-heart")
+                      ("apatite" "tourmaline-laser-cut")
+                      ("apatite" "white-square")
+                      ("apatite" "aquamarine"))
+                     (("apatite" "beryl")
+                      ("apatite" "aventurine")
+                      ("apatite" "bulls-eye")
+                      ("apatite" "azurite")
+                      ("apatite" "garnet")
+                      ("apatite" "gray-agate")
+                      ("apatite" "green-beryl"))
+                     (("apatite" "jaspilite")
+                      ("apatite" "kunzite")
+                      ("apatite" "carnelian")
+                      ("apatite" "peridot")
+                      ("apatite" "citrine")
+                      ("apatite" "prehnite")
+                      ("apatite" "chrysolite"))
+                     (("apatite" "rock-quartz")
+                      ("apatite" "rose-quartz")
+                      ("apatite" "spinel")
+                      ("apatite" "super-seven")
+                      ("apatite" "tigers-eye")
+                      ("apatite" "unakite")
+                      ("apatite" "zircon"))
+                     (("apatite" "zoisite")
+                      ("apatite" "stilbite")
+                      ("apatite" "labradorite")
+                      ("apatite" "magnesite")
+                      ("apatite" "moss-agate")
+                      ("apatite" "moonstone")
+                      ("apatite" "sphalerite"))
+                     (("apatite" "hackmanite")
+                      ("apatite" "dumortierite")
+                      ("apatite" "sunstone")
+                      ("apatite" "clinohumite")
+                      ("apatite" "blue-cushion")
+                      ("apatite" "black-onyx")
+                      ("apatite" "black-obsidian"))))))
+          (last . (0 "UP"))
+          (plmt
+           .
+           (#hasheq((color . "yellow")
+                    (current . #hasheq((column# . 3) (row# . 3)))
+                    (goto . #hasheq((column# . 5) (row# . 3)))
+                    (home . #hasheq((column# . 5) (row# . 1))))
+            #hasheq((color . "blue")
+                    (current . #hasheq((column# . 5) (row# . 5)))
+                    (goto . #hasheq((column# . 1) (row# . 3)))
+                    (home . #hasheq((column# . 3) (row# . 3))))))
+          (spare
+           .
+           #hasheq((1-image . "super-seven")
+                   (2-image . "red-spinel-square-emerald-cut")
+                   (tilekey . "│")))))
+(*** expected)
+'((("roger") ("eve")))
+(*** but received)
+'(((plain fast with-newline plain-unicode) ()))
+
+
+((/course/cs4500f22/ta/github/7/15/Tests/0-in.json /course/cs4500f22/ta/github/7/15/Tests/0-out.json))
+((passed 1) (total 2) (partial-score 1))
+

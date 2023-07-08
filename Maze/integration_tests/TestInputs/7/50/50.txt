@@ -1,0 +1,113 @@
+(testing /course/cs4500f22/ta/github/whimsical-mongooses/7/xbad)
+(testing /course/cs4500f22/ta/github/7/50/Tests/0-in.json /course/cs4500f22/ta/github/7/50/Tests/0-out.json)
+/course/cs4500f22/ta/github/whimsical-mongooses/Maze/build/Common/State.js:170
+            throw new LabyrinthError_1.LabyrinthError({
+                  ^
+
+LabyrinthError: No player was found with color '34EBCF'.
+    at BasicGameState.findAvatarIndex (/course/cs4500f22/ta/github/whimsical-mongooses/Maze/build/Common/State.js:170:19)
+    at BasicGameState.shiftPlayerToFirst (/course/cs4500f22/ta/github/whimsical-mongooses/Maze/build/Common/State.js:153:26)
+    at BasicGameState.setNextActivePlayer (/course/cs4500f22/ta/github/whimsical-mongooses/Maze/build/Common/State.js:59:18)
+    at BasicReferee.setupPlayers (/course/cs4500f22/ta/github/whimsical-mongooses/Maze/build/Referee/Referee.js:280:30)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async BasicReferee.runGame (/course/cs4500f22/ta/github/whimsical-mongooses/Maze/build/Referee/Referee.js:38:24)
+    at async badPlayerTest (/course/cs4500f22/ta/github/whimsical-mongooses/Maze/build/integration_tests/xbad.js:29:20) {
+  code: 'GAME_STATE_UNKNOWN_PLAYER'
+}
+---------------------------------
+(*** score 0)
+(*** on)
+'((("TAO" "Euclid" "setUp") ("KYLE" "Riemann") ("123123123" "Riemann"))
+  #hasheq((board
+           .
+           #hasheq((connectors
+                    .
+                    (("─" "─" "─" "─" "─" "─" "─")
+                     ("│" "│" "│" "│" "│" "│" "│")
+                     ("│" "│" "│" "│" "│" "│" "│")
+                     ("│" "│" "│" "│" "│" "│" "│")
+                     ("│" "│" "│" "│" "│" "│" "│")
+                     ("│" "│" "│" "│" "│" "│" "│")
+                     ("│" "│" "│" "│" "│" "│" "│")))
+                   (treasures
+                    .
+                    ((("green-beryl-antique" "aventurine")
+                      ("green-beryl-antique" "black-obsidian")
+                      ("tourmaline-laser-cut" "magnesite")
+                      ("rhodonite" "pink-round")
+                      ("white-square" "raw-citrine")
+                      ("grossular-garnet" "red-diamond")
+                      ("green-aventurine" "citrine-checkerboard"))
+                     (("white-square" "carnelian")
+                      ("diamond" "dumortierite")
+                      ("pink-spinel-cushion" "lapis-lazuli")
+                      ("super-seven" "kunzite")
+                      ("cordierite" "ammolite")
+                      ("clinohumite" "chrysoberyl-cushion")
+                      ("aquamarine" "sunstone"))
+                     (("spinel" "chrome-diopside")
+                      ("citrine-checkerboard" "kunzite")
+                      ("pink-emerald-cut" "kunzite")
+                      ("australian-marquise" "aquamarine")
+                      ("diamond" "goldstone")
+                      ("white-square" "blue-ceylon-sapphire")
+                      ("chrome-diopside" "iolite-emerald-cut"))
+                     (("green-beryl-antique" "kunzite")
+                      ("aplite" "purple-oval")
+                      ("aplite" "blue-cushion")
+                      ("ammolite" "purple-oval")
+                      ("rock-quartz" "sunstone")
+                      ("green-princess-cut" "sunstone")
+                      ("padparadscha-sapphire" "raw-citrine"))
+                     (("stilbite" "rock-quartz")
+                      ("grossular-garnet" "stilbite")
+                      ("tigers-eye" "pink-round")
+                      ("unakite" "unakite")
+                      ("yellow-heart" "moonstone")
+                      ("goldstone" "blue-cushion")
+                      ("prehnite" "padparadscha-oval"))
+                     (("peridot" "prehnite")
+                      ("peridot" "bulls-eye")
+                      ("blue-spinel-heart" "gray-agate")
+                      ("golden-diamond-cut" "clinohumite")
+                      ("chrome-diopside" "green-beryl-antique")
+                      ("sphalerite" "moss-agate")
+                      ("tourmaline" "cordierite"))
+                     (("black-onyx" "heliotrope")
+                      ("sunstone" "diamond")
+                      ("yellow-baguette" "tigers-eye")
+                      ("raw-beryl" "diamond")
+                      ("blue-pear-shape" "heliotrope")
+                      ("unakite" "tourmaline-laser-cut")
+                      ("almandine-garnet" "mexican-opal"))))))
+          (last . null)
+          (plmt
+           .
+           (#hasheq((color . "34EBCF")
+                    (current . #hasheq((column# . 1) (row# . 1)))
+                    (goto . #hasheq((column# . 1) (row# . 1)))
+                    (home . #hasheq((column# . 1) (row# . 1))))
+            #hasheq((color . "111145")
+                    (current . #hasheq((column# . 5) (row# . 2)))
+                    (goto . #hasheq((column# . 3) (row# . 1)))
+                    (home . #hasheq((column# . 3) (row# . 1))))
+            #hasheq((color . "111112")
+                    (current . #hasheq((column# . 3) (row# . 5)))
+                    (goto . #hasheq((column# . 5) (row# . 5)))
+                    (home . #hasheq((column# . 3) (row# . 3))))))
+          (spare
+           .
+           #hasheq((1-image . "jaspilite")
+                   (2-image . "lapis-lazuli")
+                   (tilekey . "─")))))
+(*** expected)
+'((("KYLE") ("TAO")))
+(*** but received)
+'(((plain fast with-newline plain-unicode) ()))
+
+
+(testing /course/cs4500f22/ta/github/7/50/Tests/1-in.json /course/cs4500f22/ta/github/7/50/Tests/1-out.json)
+(testing /course/cs4500f22/ta/github/7/50/Tests/2-in.json /course/cs4500f22/ta/github/7/50/Tests/2-out.json)
+((/course/cs4500f22/ta/github/7/50/Tests/1-in.json /course/cs4500f22/ta/github/7/50/Tests/1-out.json) (/course/cs4500f22/ta/github/7/50/Tests/2-in.json /course/cs4500f22/ta/github/7/50/Tests/2-out.json))
+((passed 2) (total 3) (partial-score 2))
+

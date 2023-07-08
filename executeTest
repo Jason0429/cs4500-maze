@@ -1,0 +1,26 @@
+#!/bin/bash
+set -Eeuo pipefail
+# Takes 2 arguments - the executable and the file prefix
+infile=${2}-in.json
+outfile=${2}-out.json
+echo "Trying $infile"
+start_time=$(date +%s)
+actual_output=$($1 < $infile)
+normalized_actual_output=$(echo "$actual_output" | jq --sort-keys .)
+
+normalized_expected_output=$(jq --sort-keys . $outfile)
+end_time=$(date +%s)
+duration=$(($end_time - $start_time))
+
+if [ "$duration" -gt "30" ]; then
+  duration_str="\033[1;41m[~$(($duration))s]\033[0m"
+elif [ "$duration" -gt "10" ]; then
+  duration_str="\033[1;43m[~$(($duration))s]\033[0m"
+else 
+  duration_str="[~$(($duration))s]"
+fi
+
+printf ">> $duration_str Comparing expected output (top) to actual (bottom) "
+diff  <(echo $normalized_expected_output) <(echo $normalized_actual_output);
+
+echo -e "\033[1;32m[OK]\033[0m"

@@ -1,0 +1,38 @@
+cd "./Other" && npm install && npm run-script build
+npm WARN deprecated source-map-url@0.4.1: See https://github.com/lydell/source-map-url#deprecated
+npm WARN deprecated urix@0.1.0: Please see https://github.com/lydell/urix#deprecated
+npm WARN deprecated resolve-url@0.2.1: https://github.com/lydell/resolve-url#deprecated
+npm WARN deprecated source-map-resolve@0.5.3: See https://github.com/lydell/source-map-resolve#deprecated
+
+added 727 packages, and audited 728 packages in 20s
+
+68 packages are looking for funding
+  run `npm fund` for details
+
+11 vulnerabilities (3 moderate, 3 high, 5 critical)
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+
+> cs4500_project@1.0.0 build
+> webpack --mode=production --node-env=production
+
+asset main.js 26.5 KiB [emitted] [minimized] (name: main)
+orphan modules 43.2 KiB [orphan] 17 modules
+runtime modules 663 bytes 3 modules
+built modules 71.5 KiB [built]
+  cacheable modules 71.4 KiB
+    modules by path ./node_modules/stream-json/*.js 24.1 KiB
+      ./node_modules/stream-json/index.js 217 bytes [built] [code generated]
+      ./node_modules/stream-json/Assembler.js 3.44 KiB [built] [code generated]
+      ./node_modules/stream-json/Parser.js 20.5 KiB [built] [code generated]
+    modules by path ./node_modules/stream-json/utils/*.js 1.32 KiB
+      ./node_modules/stream-json/utils/emit.js 125 bytes [built] [code generated]
+      ./node_modules/stream-json/utils/Utf8Stream.js 1.2 KiB [built] [code generated]
+    ./src/index.ts + 17 modules 45.9 KiB [built] [code generated]
+  external "events" 42 bytes [built] [code generated]
+  external "stream" 42 bytes [built] [code generated]
+  external "string_decoder" 42 bytes [built] [code generated]
+webpack 5.74.0 compiled successfully in 4317 ms

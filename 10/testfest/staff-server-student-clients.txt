@@ -1,0 +1,19 @@
+(testing /course/cs4500f22/ta/github2/stoic-mustangs/10/xclients /home/samc/sw-dev/22SwDev/Code/10/xserver)
+(testing /home/samc/sw-dev/22SwDev/Code/10/Tests/0-in.json /home/samc/sw-dev/22SwDev/Code/10/Tests/0-out.json)
+(testing /home/samc/sw-dev/22SwDev/Code/10/Tests/1-in.json /home/samc/sw-dev/22SwDev/Code/10/Tests/1-out.json)
+(testing /home/samc/sw-dev/22SwDev/Code/10/Tests/2-in.json /home/samc/sw-dev/22SwDev/Code/10/Tests/2-out.json)
+(testing /home/samc/sw-dev/22SwDev/Code/10/Tests/3-in.json /home/samc/sw-dev/22SwDev/Code/10/Tests/3-out.json)
+(testing /home/samc/sw-dev/22SwDev/Code/10/Tests/4-in.json /home/samc/sw-dev/22SwDev/Code/10/Tests/4-out.json)
+((/home/samc/sw-dev/22SwDev/Code/10/Tests/0-in.json /home/samc/sw-dev/22SwDev/Code/10/Tests/0-out.json) (/home/samc/sw-dev/22SwDev/Code/10/Tests/1-in.json /home/samc/sw-dev/22SwDev/Code/10/Tests/1-out.json) (/home/samc/sw-dev/22SwDev/Code/10/Tests/2-in.json /home/samc/sw-dev/22SwDev/Code/10/Tests/2-out.json) (/home/samc/sw-dev/22SwDev/Code/10/Tests/3-in.json /home/samc/sw-dev/22SwDev/Code/10/Tests/3-out.json) (/home/samc/sw-dev/22SwDev/Code/10/Tests/4-in.json /home/samc/sw-dev/22SwDev/Code/10/Tests/4-out.json))
+((passed 5) (total 5) (partial-score 5))
+(testing /course/cs4500f22/ta/github2/stoic-mustangs/10/xclients /home/samc/sw-dev/22SwDev/Code/10/xserver)
+directory-list: could not open directory
+  path: /course/cs4500f22/ta/github2/10/stoic-mustangs/Tests
+  system error: No such file or directory; errno=2
+  context...:
+   body of top-level
+   /proj/racket/plt-released/recent/collects/racket/private/for.rkt:2468:2: dir-list
+   /proj/racket/plt-released/recent/collects/racket/private/for.rkt:2498:7
+   /proj/racket/plt-released/recent/collects/racket/private/for.rkt:557:2: make-sequence
+   /home/samc/sw-dev/SwDev/Testing/harness.rkt:694:0: json-test-files
+   /home/samc/sw-dev/SwDev/Testing/harness.rkt:400:0: work-horse

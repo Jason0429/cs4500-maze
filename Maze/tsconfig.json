@@ -1,0 +1,35 @@
+{
+  "extends": "./node_modules/gts/tsconfig-google.json",
+  "compilerOptions": {
+    "rootDir": ".",
+    "outDir": "build",
+    "skipLibCheck": true,
+    "esModuleInterop": true
+  },
+  "typedocOptions": {
+    "entryPoints": [
+      "Common",
+      "Players",
+      "Referee",
+      "Server",
+      "Client",
+      "Remote",
+      "test_utility"
+    ],
+    "out": "docs",
+    "entryPointStrategy": "Expand"
+  },
+  "include": [
+    "Common/**/*.ts",
+    "Players/**/*.ts",
+    "Referee/**/*.ts",
+    "integration_tests/**/*.ts",
+    "unit_tests/**/*.ts",
+    "Utility/**/*.ts",
+    "Server/**/*.ts",
+    "Remote/**/*.ts",
+    "Client/**/*.ts",
+    "test_utility/**/*.ts",
+    "observer-gui/**/*.ts"
+  ]
+}

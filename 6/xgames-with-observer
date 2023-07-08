@@ -1,0 +1,2 @@
+#!/bin/sh
+NO_UNIQUE_HOMES_CONSTRAINT=true NO_GOALS_IMMOVABLE_CONSTRAINT=true npx electron --no-sandbox ../Maze/build/integration_tests/xgames.observer.js 2>/dev/null

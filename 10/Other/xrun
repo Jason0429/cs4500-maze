@@ -1,0 +1,17 @@
+#!/bin/bash
+DIR=$(dirname -- "$0");
+# Takes in a JSON input file, and runs a game with the server and clients
+# Uses a random port
+port=$(shuf -i 10000-60000 -n 1)
+read players
+read state
+
+# start the client processes in this container, so that we can easily kill it
+# we also have to kill all of its children (eg. each client)
+# 'm' enables job control functions (like backgrounding)
+set -m; (echo $players | ${DIR}/../xclients $port) & set +m; pid=$!
+
+echo $state | ${DIR}/../xserver $port
+
+# Kills all of the processes within the given group (ie. all clients)
+kill -- -"$pid"

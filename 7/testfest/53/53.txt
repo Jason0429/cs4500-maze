@@ -1,0 +1,111 @@
+(testing /course/cs4500f22/ta/github/whimsical-mongooses/7/xbad)
+(testing /course/cs4500f22/ta/github/7/53/Tests/1-in.json /course/cs4500f22/ta/github/7/53/Tests/1-out.json)
+/course/cs4500f22/ta/github/whimsical-mongooses/Maze/build/Common/State.js:170
+            throw new LabyrinthError_1.LabyrinthError({
+                  ^
+
+LabyrinthError: No player was found with color 'purple'.
+    at BasicGameState.findAvatarIndex (/course/cs4500f22/ta/github/whimsical-mongooses/Maze/build/Common/State.js:170:19)
+    at BasicGameState.shiftPlayerToFirst (/course/cs4500f22/ta/github/whimsical-mongooses/Maze/build/Common/State.js:153:26)
+    at BasicGameState.setNextActivePlayer (/course/cs4500f22/ta/github/whimsical-mongooses/Maze/build/Common/State.js:59:18)
+    at BasicReferee.setupPlayers (/course/cs4500f22/ta/github/whimsical-mongooses/Maze/build/Referee/Referee.js:280:30)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async BasicReferee.runGame (/course/cs4500f22/ta/github/whimsical-mongooses/Maze/build/Referee/Referee.js:38:24)
+    at async badPlayerTest (/course/cs4500f22/ta/github/whimsical-mongooses/Maze/build/integration_tests/xbad.js:29:20) {
+  code: 'GAME_STATE_UNKNOWN_PLAYER'
+}
+---------------------------------
+(*** score 0)
+(*** on)
+'((("Dylan" "Euclid" "setUp")
+   ("Brian" "Riemann" "takeTurn")
+   ("Sam" "Euclid" "win"))
+  #hasheq((board
+           .
+           #hasheq((connectors
+                    .
+                    (("┌" "┌" "┌" "┌" "┌" "┌" "┌")
+                     ("┌" "┌" "┌" "┌" "┌" "┌" "┌")
+                     ("┌" "┌" "┌" "┌" "┌" "┌" "┌")
+                     ("┌" "┌" "┌" "┌" "┌" "┌" "┌")
+                     ("┌" "┌" "┌" "┌" "┌" "┌" "┌")
+                     ("┌" "┌" "┌" "┌" "┌" "┌" "┌")
+                     ("┌" "┌" "┌" "┌" "┌" "┌" "┌")))
+                   (treasures
+                    .
+                    ((("alexandrite" "diamond")
+                      ("alexandrite" "emerald")
+                      ("alexandrite" "garnet")
+                      ("alexandrite" "goldstone")
+                      ("alexandrite" "heliotrope")
+                      ("alexandrite" "jaspilite")
+                      ("alexandrite" "kunzite"))
+                     (("amethyst" "diamond")
+                      ("amethyst" "emerald")
+                      ("amethyst" "garnet")
+                      ("amethyst" "goldstone")
+                      ("amethyst" "heliotrope")
+                      ("amethyst" "jaspilite")
+                      ("amethyst" "kunzite"))
+                     (("ametrine" "diamond")
+                      ("ametrine" "emerald")
+                      ("ametrine" "garnet")
+                      ("ametrine" "goldstone")
+                      ("ametrine" "heliotrope")
+                      ("ametrine" "jaspilite")
+                      ("ametrine" "kunzite"))
+                     (("azurite" "diamond")
+                      ("azurite" "emerald")
+                      ("azurite" "garnet")
+                      ("azurite" "goldstone")
+                      ("azurite" "heliotrope")
+                      ("azurite" "jaspilite")
+                      ("azurite" "kunzite"))
+                     (("carnelian" "diamond")
+                      ("carnelian" "emerald")
+                      ("carnelian" "garnet")
+                      ("carnelian" "goldstone")
+                      ("carnelian" "heliotrope")
+                      ("carnelian" "jaspilite")
+                      ("carnelian" "kunzite"))
+                     (("citrine" "diamond")
+                      ("citrine" "emerald")
+                      ("citrine" "garnet")
+                      ("citrine" "goldstone")
+                      ("citrine" "heliotrope")
+                      ("citrine" "jaspilite")
+                      ("citrine" "kunzite"))
+                     (("cordierite" "diamond")
+                      ("cordierite" "emerald")
+                      ("cordierite" "garnet")
+                      ("cordierite" "goldstone")
+                      ("cordierite" "heliotrope")
+                      ("cordierite" "jaspilite")
+                      ("cordierite" "kunzite"))))))
+          (last . (0 "LEFT"))
+          (plmt
+           .
+           (#hasheq((color . "purple")
+                    (current . #hasheq((column# . 1) (row# . 1)))
+                    (goto . #hasheq((column# . 5) (row# . 3)))
+                    (home . #hasheq((column# . 3) (row# . 5))))
+            #hasheq((color . "D1675A")
+                    (current . #hasheq((column# . 1) (row# . 1)))
+                    (goto . #hasheq((column# . 3) (row# . 5)))
+                    (home . #hasheq((column# . 1) (row# . 1))))
+            #hasheq((color . "blue")
+                    (current . #hasheq((column# . 1) (row# . 1)))
+                    (goto . #hasheq((column# . 5) (row# . 5)))
+                    (home . #hasheq((column# . 5) (row# . 1))))))
+          (spare
+           .
+           #hasheq((1-image . "ruby") (2-image . "zircon") (tilekey . "┌")))))
+(*** expected)
+'((() ("Brian" "Dylan" "Sam")))
+(*** but received)
+'(((plain fast with-newline plain-unicode) ()))
+
+
+()
+((passed 0) (total 1) (partial-score 0))
+

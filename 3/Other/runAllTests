@@ -1,0 +1,21 @@
+#!/bin/bash
+set -e
+
+for i in {0..2}
+do
+  ../../executeTest ../xboard ../Tests/$i
+  echo
+done
+
+for input_file in ../../Maze/integration_tests/TestInputs/3/*/*-in.json
+do
+  # Removes the shortest match from / to the end of the string (ie. the filename)
+  dir=${input_file%/*}
+  # Removes the longest match from .. to / (ie. the directory part of the path)
+  filename=${input_file##..*/}
+  # Given the filename, only keep everything before the - (ie. the number of the text)
+  test_number=${filename%-*}
+  
+  ../../executeTest ../xboard $dir/$test_number
+  echo
+done

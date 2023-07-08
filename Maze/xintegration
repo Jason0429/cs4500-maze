@@ -1,0 +1,57 @@
+#!/bin/bash
+set -e
+# Runs all of our integration tests
+# Assumes that each directory has a script called `automateAllTests` in
+# `/Other/testing`
+
+DIRNAME=$(basename "$PWD")
+
+if [ "$DIRNAME" != "Maze" ]; then
+    echo "This script must be run from inside the Maze directory. Currently in $DIRNAME"
+    exit 1
+fi
+
+cd ..
+
+if [ $# -gt 0 ]
+  then
+  cd $1
+  # Only run make if we run with one argument
+  # Treat any additional arguments as a "don't `make` before running"
+  if [ $# -eq 1 ]
+    then 
+    make
+  fi
+  start_time=$(date +%s)
+  echo ">> Running integration tests for Milestone $1"
+  echo
+  cd ./Other/
+  ./runAllTests
+
+  end_time=$(date +%s)
+  echo -e "\033[1;34m>>>>>> [~$(($end_time - $start_time))s] Passed integration tests for Milestone $1 :) <<<<<<\033[0m"
+  exit 0
+fi
+
+for i in {3..10}
+do
+  if [ "$i" -eq "9" ]; then
+    continue
+  fi
+  echo ">> Running Makefile for Milestone $i"
+  echo
+  cd $i
+  make
+
+  echo ">> Running integration tests for Milestone $i"
+  echo
+  cd ./Other
+  ./runAllTests
+
+  cd ../../
+  echo -e "\033[1;34m>>>> Passed integration tests for Milestone $i\033[0m"
+done
+
+echo -e "\033[1;34m---------------------------------------------\033[0m"
+echo -e "\033[1;34m>>>>>> All integration tests passed :) <<<<<<\033[0m"
+echo -e "\033[1;34m---------------------------------------------\033[0m"
